@@ -4,6 +4,7 @@ import 'package:chaparapp/features/consignment/consignment.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/core.dart';
 import '../../../../generated/l10n.dart';
@@ -70,7 +71,17 @@ class _ConsignmentListPageState extends State<ConsignmentListPage> {
                                 return ConsignmentItem(
                                     consignmentItem: consignments[index],
                                     onDeliveredPress: () {},
-                                    onCallPressed: (String mobile) {});
+                                    onCallPressed: (String mobile) async {
+                                      if (await canLaunchUrl(
+                                          Uri(scheme: 'tel', path: mobile))) {
+                                        await launchUrl(Uri(
+                                          scheme: 'tel',
+                                          path: mobile,
+                                        ));
+                                      } else {
+                                        throw 'Could not launch $mobile';
+                                      }
+                                    });
                               })
                           : Container();
                 },
