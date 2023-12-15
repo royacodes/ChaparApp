@@ -1,0 +1,10 @@
+const serverResponseNull = "خطا در ارتباط با سرور!";
+const serverResponse400 = "درخواست شما اشتباه است!";
+const serverResponse403 = "خطا در دسترسی کاربر وجود دارد!";
+const serverResponse404 = "درخواست شما با الزامات سرور همخوانی ندارد!";
+const serverResponse500 = "خطای داخلی سرور رخ داده است";
+const serverTimeOutError = "پاسخی از سرور دریافت نشد!";
+const serverOtherError = "خطا در ارتباط با سرور!";
+const applicationError = "خطای درون برنامه ای!";
+const noInternetConnectionError = "دستگاه خود را به اینترنت متصل نمایید.";
+const functionalError = 'خطا در انجام عملیات';

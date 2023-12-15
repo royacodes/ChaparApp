@@ -4,6 +4,7 @@ export 'constants/consts.dart';
 export 'constants/default_values.dart';
 export 'di/injection_container.dart';
 export 'enums/snackbar_type.dart';
+export 'exceptions/error_const.dart';
 export 'exceptions/exceptions.dart';
 export 'routes/routes.dart';
 export 'usecase/usecase.dart';
