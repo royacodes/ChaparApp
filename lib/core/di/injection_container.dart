@@ -1,3 +1,4 @@
+import 'package:chaparapp/features/auth/auth.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
@@ -6,6 +7,18 @@ import '../../config/config.dart';
 final sl = GetIt.instance;
 
 Future<void> init() async {
+  ///UseCases
+  sl.registerLazySingleton(() => Login(loginRepository: sl()));
+
+  ///Repositories
+  sl.registerLazySingleton<LoginRepository>(() => LoginRepositoryImpl(
+        loginRemoteDatasource: sl(),
+      ));
+
+  ///Remote Data Sources
+  sl.registerLazySingleton<LoginRemoteDatasource>(
+      () => LoginRemoteDatasourceImpl(dio: sl()));
+
   sl.registerLazySingleton(() {
     final dio = Dio();
     dio.options.baseUrl = AppConfig.baseUrl;
