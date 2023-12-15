@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appName": MessageLookupByLibrary.simpleMessage("Chapar"),
         "consignments": MessageLookupByLibrary.simpleMessage("محموله ها"),
+        "deliveryBtn": MessageLookupByLibrary.simpleMessage("تحویل"),
         "emailLabel": MessageLookupByLibrary.simpleMessage("email"),
         "emptyEmail": MessageLookupByLibrary.simpleMessage("Enter your Email"),
         "emptyPassword":

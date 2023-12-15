@@ -8,5 +8,6 @@
   "invalidEmail": "Your email is invalid",
   "emptyPassword": "Enter your password",
   "invalidLoginRequestException": "Email or Password is wrong",
-  "consignments": "محموله ها"
+  "consignments": "محموله ها",
+  "deliveryBtn": "تحویل"
 }

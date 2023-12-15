@@ -149,6 +149,16 @@ class S {
       args: [],
     );
   }
+
+  /// `تحویل`
+  String get deliveryBtn {
+    return Intl.message(
+      'تحویل',
+      name: 'deliveryBtn',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

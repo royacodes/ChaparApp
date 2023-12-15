@@ -1,3 +1,4 @@
+import 'package:chaparapp/config/config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -13,6 +14,8 @@ class UserImage extends StatelessWidget {
         width: 25,
         height: 25,
         fit: BoxFit.cover,
+        colorFilter:
+            const ColorFilter.mode(AppTheme.primaryLightColor, BlendMode.srcIn),
       ),
     );
   }

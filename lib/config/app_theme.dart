@@ -23,6 +23,7 @@ class AppTheme {
 
   static const Color blackColor = Color(0xFF000000);
   static const Color whiteColor = Color(0xFFFFFFFF);
+  static const Color shadowColor = Color(0x19000000);
 
   ///Text Color
 
@@ -42,13 +43,21 @@ class AppTheme {
     colors: [primaryColor, primaryDarkColor],
   );
 
+  //Shadow
+  static const cardBoxShadow = BoxShadow(
+    color: shadowColor,
+    blurRadius: 130,
+    offset: Offset(14, 0),
+    spreadRadius: 0,
+  );
+
   //Light Theme
 
   static ThemeData lightTheme = ThemeData(
     fontFamily: 'Yekan',
-    canvasColor: surfaceColor,
+    canvasColor: backgroundColor,
     disabledColor: disabledColor,
-    scaffoldBackgroundColor: surfaceColor,
+    scaffoldBackgroundColor: backgroundColor,
     useMaterial3: false,
     textTheme: const TextTheme(
         headlineMedium: h3Medium18,

@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:chaparapp/config/config.dart';
 import 'package:chaparapp/features/consignment/consignment.dart';
 
 import 'package:flutter/material.dart';
@@ -39,18 +40,13 @@ class _ConsignmentListPageState extends State<ConsignmentListPage> {
     return SafeArea(
         child: Scaffold(
             appBar: AppBar(
-              title: Text(
-                S.of(context).consignments,
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
-              leading: IconButton(
-                icon: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
+              backgroundColor: AppTheme.surfaceColor,
+              title: Padding(
+                padding: const EdgeInsets.only(right: AppInsets.largePadding),
+                child: Text(
+                  S.of(context).consignments,
+                  style: Theme.of(context).textTheme.labelLarge,
                 ),
-                onPressed: () {
-                  AutoRouter.of(context).pop();
-                },
               ),
             ),
             body: ListView.builder(
@@ -60,7 +56,10 @@ class _ConsignmentListPageState extends State<ConsignmentListPage> {
                 ),
                 itemCount: consignments.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return Container();
+                  return ConsignmentItem(
+                      consignmentItem: consignments[index],
+                      onDeliveredPress: () {},
+                      onCallPressed: (String mobile) {});
                 })));
   }
 }
