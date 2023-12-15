@@ -27,6 +27,14 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ConsignmentListPage(),
       );
     },
+    DeliveryRoute.name: (routeData) {
+      final args = routeData.argsAs<DeliveryRouteArgs>(
+          orElse: () => const DeliveryRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: DeliveryPage(key: args.key),
+      );
+    },
   };
 }
 
@@ -56,4 +64,33 @@ class ConsignmentListRoute extends PageRouteInfo<void> {
   static const String name = 'ConsignmentListRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [DeliveryPage]
+class DeliveryRoute extends PageRouteInfo<DeliveryRouteArgs> {
+  DeliveryRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          DeliveryRoute.name,
+          args: DeliveryRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'DeliveryRoute';
+
+  static const PageInfo<DeliveryRouteArgs> page =
+      PageInfo<DeliveryRouteArgs>(name);
+}
+
+class DeliveryRouteArgs {
+  const DeliveryRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'DeliveryRouteArgs{key: $key}';
+  }
 }

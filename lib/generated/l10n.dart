@@ -159,6 +159,56 @@ class S {
       args: [],
     );
   }
+
+  /// `تحویل`
+  String get deliveryPageTitle {
+    return Intl.message(
+      'تحویل',
+      name: 'deliveryPageTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `کد تحویل را وارد نمایید`
+  String get enterDeliveryCode {
+    return Intl.message(
+      'کد تحویل را وارد نمایید',
+      name: 'enterDeliveryCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `کد تحویل باید چهار رقم باشد`
+  String get deliveryCodeLengthInvalid {
+    return Intl.message(
+      'کد تحویل باید چهار رقم باشد',
+      name: 'deliveryCodeLengthInvalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تایید`
+  String get confirm {
+    return Intl.message(
+      'تایید',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `کد تحویل`
+  String get deliveryCodeLabel {
+    return Intl.message(
+      'کد تحویل',
+      name: 'deliveryCodeLabel',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

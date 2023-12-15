@@ -23,13 +23,20 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appName": MessageLookupByLibrary.simpleMessage("چاپار"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تایید"),
         "consignments": MessageLookupByLibrary.simpleMessage("محموله ها"),
         "deliveryBtn": MessageLookupByLibrary.simpleMessage("تحویل"),
+        "deliveryCodeLabel": MessageLookupByLibrary.simpleMessage("کد تحویل"),
+        "deliveryCodeLengthInvalid":
+            MessageLookupByLibrary.simpleMessage("کد تحویل باید چهار رقم باشد"),
+        "deliveryPageTitle": MessageLookupByLibrary.simpleMessage("تحویل"),
         "emailLabel": MessageLookupByLibrary.simpleMessage("ایمیل"),
         "emptyEmail":
             MessageLookupByLibrary.simpleMessage("ایمیل خود را وارد کنید"),
         "emptyPassword":
             MessageLookupByLibrary.simpleMessage("کلمه عبور خود را وارد کنید"),
+        "enterDeliveryCode":
+            MessageLookupByLibrary.simpleMessage("کد تحویل را وارد نمایید"),
         "invalidEmail":
             MessageLookupByLibrary.simpleMessage("ایمیل وارد شده نامعتبر است"),
         "invalidLoginRequestException": MessageLookupByLibrary.simpleMessage(

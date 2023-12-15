@@ -1,7 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 
 import '../../features/auth/auth.dart';
 import '../../features/consignment/consignment.dart';
+import '../../features/delivery/delivery.dart';
 
 part 'routes.gr.dart';
 
@@ -15,6 +17,9 @@ class AppRouter extends _$AppRouter {
             transitionsBuilder: TransitionsBuilders.slideBottom),
         CustomRoute(
             page: ConsignmentListRoute.page,
+            transitionsBuilder: TransitionsBuilders.fadeIn),
+        CustomRoute(
+            page: DeliveryRoute.page,
             transitionsBuilder: TransitionsBuilders.fadeIn),
       ];
 }

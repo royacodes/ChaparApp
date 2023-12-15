@@ -70,7 +70,10 @@ class _ConsignmentListPageState extends State<ConsignmentListPage> {
                               itemBuilder: (BuildContext context, int index) {
                                 return ConsignmentItem(
                                     consignmentItem: consignments[index],
-                                    onDeliveredPress: () {},
+                                    onDeliveredPress: () {
+                                      AutoRouter.of(context)
+                                          .push(DeliveryRoute());
+                                    },
                                     onCallPressed: (String mobile) async {
                                       if (await canLaunchUrl(
                                           Uri(scheme: 'tel', path: mobile))) {

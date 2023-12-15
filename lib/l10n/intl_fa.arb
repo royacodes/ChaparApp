@@ -9,5 +9,10 @@
   "emptyPassword": "کلمه عبور خود را وارد کنید",
   "invalidLoginRequestException": "ایمیل یا کلمه عبور وارد شده اشتباه است",
   "consignments": "محموله ها",
-  "deliveryBtn": "تحویل"
+  "deliveryBtn": "تحویل",
+  "deliveryPageTitle": "تحویل",
+  "enterDeliveryCode": "کد تحویل را وارد نمایید",
+  "deliveryCodeLengthInvalid": "کد تحویل باید چهار رقم باشد",
+  "confirm": "تایید",
+  "deliveryCodeLabel": "کد تحویل"
 }
