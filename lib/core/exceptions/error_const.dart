@@ -8,3 +8,4 @@ const serverOtherError = "خطا در ارتباط با سرور!";
 const applicationError = "خطای درون برنامه ای!";
 const noInternetConnectionError = "دستگاه خود را به اینترنت متصل نمایید.";
 const functionalError = 'خطا در انجام عملیات';
+const defaultErrorCode = '0';

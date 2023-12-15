@@ -6,5 +6,6 @@
   "emailLabel": "ایمیل",
   "emptyEmail": "ایمیل خود را وارد کنید",
   "invalidEmail": "ایمیل وارد شده نامعتبر است",
-  "emptyPassword": "کلمه عبور خود را وارد کنید"
+  "emptyPassword": "کلمه عبور خود را وارد کنید",
+  "invalidLoginRequestException": "ایمیل یا کلمه عبور وارد شده اشتباه است"
 }

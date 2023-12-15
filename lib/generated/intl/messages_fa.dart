@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("کلمه عبور خود را وارد کنید"),
         "invalidEmail":
             MessageLookupByLibrary.simpleMessage("ایمیل وارد شده نامعتبر است"),
+        "invalidLoginRequestException": MessageLookupByLibrary.simpleMessage(
+            "ایمیل یا کلمه عبور وارد شده اشتباه است"),
         "loginButton": MessageLookupByLibrary.simpleMessage("ورود"),
         "loginTo": MessageLookupByLibrary.simpleMessage("ورود به "),
         "passwordLabel": MessageLookupByLibrary.simpleMessage("کلمه عبور")

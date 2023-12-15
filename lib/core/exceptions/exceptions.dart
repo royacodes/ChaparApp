@@ -4,8 +4,8 @@ class ServerException implements Exception {
 
   ServerException(this.message, this.statusCode);
 
+  @override
   String toString() {
-    String errorCode = " خطای $statusCode";
     return "$message";
   }
 }

@@ -18,11 +18,15 @@ class LoginCubit extends Cubit<LoginState> {
           await login(ParamLogin(loginRequestModel: loginRequestModel));
       emit(LoginLoaded(loginResponse: response));
     } on ServerException catch (e) {
-      emit(LoginFailure(errorMessage: e.message));
+      emit(LoginFailure(errorMessage: e.message, errorCode: e.statusCode));
     } on NetworkException catch (e) {
-      emit(LoginFailure(errorMessage: e.message));
+      emit(LoginFailure(
+        errorMessage: e.message,
+      ));
     } on AppException catch (e) {
-      emit(LoginFailure(errorMessage: e.message));
+      emit(LoginFailure(
+        errorMessage: e.message,
+      ));
     }
   }
 }

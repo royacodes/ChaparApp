@@ -121,12 +121,21 @@ class _LoginPageFormState extends State<LoginPageForm> {
                 }
                 if (state is LoginFailure) {
                   if (mounted) {
-                    CustomSnackBar(
-                            context: context,
-                            text: state.errorMessage,
-                            type: SnackBarType.error,
-                            onPress: () {})
-                        .prompt();
+                    if (state.errorCode == '401') {
+                      CustomSnackBar(
+                              context: context,
+                              text: S.of(context).invalidLoginRequestException,
+                              type: SnackBarType.error,
+                              onPress: () {})
+                          .prompt();
+                    } else {
+                      CustomSnackBar(
+                              context: context,
+                              text: state.errorMessage,
+                              type: SnackBarType.error,
+                              onPress: () {})
+                          .prompt();
+                    }
                   }
                 }
               },

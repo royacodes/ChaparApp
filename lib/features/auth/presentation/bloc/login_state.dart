@@ -18,5 +18,9 @@ class LoginLoaded extends LoginState {
 
 class LoginFailure extends LoginState {
   final String errorMessage;
-  LoginFailure({required this.errorMessage});
+  final String errorCode;
+  LoginFailure({
+    required this.errorMessage,
+    this.errorCode = defaultErrorCode,
+  });
 }

@@ -28,7 +28,8 @@ class LoginRepositoryImpl implements LoginRepository {
           throw ServerException(serverTimeOutError, '0');
         } else {
           throw ServerException(
-              serverOtherError, error.response!.statusCode.toString());
+              error.response!.statusMessage ?? serverOtherError,
+              error.response!.statusCode.toString());
         }
       }
     } catch (e) {

@@ -6,5 +6,5 @@
   "emailLabel": "email",
   "emptyEmail": "Enter your Email",
   "invalidEmail": "Your email is invalid",
-  "emptyPassword": "Enter your password"
-}
+  "emptyPassword": "Enter your password",
+  "invalidLoginRequestException": "Email or Password is wrong"}

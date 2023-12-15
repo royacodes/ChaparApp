@@ -129,6 +129,16 @@ class S {
       args: [],
     );
   }
+
+  /// `ایمیل یا کلمه عبور وارد شده اشتباه است`
+  String get invalidLoginRequestException {
+    return Intl.message(
+      'ایمیل یا کلمه عبور وارد شده اشتباه است',
+      name: 'invalidLoginRequestException',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
