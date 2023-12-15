@@ -13,4 +13,5 @@ export 'domain/repositories/consignment_repository.dart';
 export 'domain/usecases/get_all_consignments.dart';
 export 'presentation/bloc/consignment_cubit.dart';
 export 'presentation/pages/consignment_list_page.dart';
+export 'presentation/providers/consignment_provider.dart';
 export 'presentation/widgets/consignment_item.dart';

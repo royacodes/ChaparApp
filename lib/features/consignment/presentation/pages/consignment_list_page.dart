@@ -22,44 +22,59 @@ class _ConsignmentListPageState extends State<ConsignmentListPage> {
     super.initState();
   }
 
-  List<GetAllConsignmentData> consignments = const [
-    GetAllConsignmentData(
-        id: 1,
-        status: "delivery",
-        isCod: false,
-        receiver: GetAllConsignmentReceiver(
-            gender: "m", fullName: "علی محمدی", mobile: "09123456789"),
-        receiverAddress: GetAllConsignmentReceiverAddress(
-            city: "تهران",
-            region: "ولیعصر",
-            fullAddress: "خیابان رشت، پلاک 34"))
-  ];
+  List<GetAllConsignmentData> consignments = [];
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-            appBar: AppBar(
-              backgroundColor: AppTheme.surfaceColor,
-              title: Padding(
-                padding: const EdgeInsets.only(right: AppInsets.largePadding),
-                child: Text(
-                  S.of(context).consignments,
-                  style: Theme.of(context).textTheme.labelLarge,
+    return ConsignmentProvider(
+      child: SafeArea(
+          child: Scaffold(
+              appBar: AppBar(
+                backgroundColor: AppTheme.surfaceColor,
+                title: Padding(
+                  padding: const EdgeInsets.only(right: AppInsets.largePadding),
+                  child: Text(
+                    S.of(context).consignments,
+                    style: Theme.of(context).textTheme.labelLarge,
+                  ),
                 ),
               ),
-            ),
-            body: ListView.builder(
-                padding: const EdgeInsets.only(
-                  top: 16,
-                  bottom: 16,
-                ),
-                itemCount: consignments.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ConsignmentItem(
-                      consignmentItem: consignments[index],
-                      onDeliveredPress: () {},
-                      onCallPressed: (String mobile) {});
-                })));
+              body: BlocConsumer<ConsignmentCubit, ConsignmentState>(
+                listener: (context, state) {
+                  if (state is ConsignmentLoaded) {
+                    setState(() {
+                      consignments = state.getAllConsignmentResponse!.data;
+                    });
+                  }
+                  if (state is ConsignmentFailure) {
+                    if (mounted) {
+                      CustomSnackBar(
+                          context: context,
+                          text: state.errorMessage,
+                          type: SnackBarType.error,
+                          onPress: () {});
+                    }
+                  }
+                },
+                builder: (context, state) {
+                  return state is ConsignmentLoading
+                      ? const DotsProgress()
+                      : state is ConsignmentLoaded
+                          ? ListView.builder(
+                              padding: const EdgeInsets.only(
+                                top: 16,
+                                bottom: 16,
+                              ),
+                              itemCount: consignments.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return ConsignmentItem(
+                                    consignmentItem: consignments[index],
+                                    onDeliveredPress: () {},
+                                    onCallPressed: (String mobile) {});
+                              })
+                          : Container();
+                },
+              ))),
+    );
   }
 }
