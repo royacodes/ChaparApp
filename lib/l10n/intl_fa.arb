@@ -3,5 +3,8 @@
   "loginTo": "ورود به ",
   "loginButton": "ورود",
   "passwordLabel": "کلمه عبور",
-  "emailLabel": "ایمیل"
+  "emailLabel": "ایمیل",
+  "emptyEmail": "ایمیل خود را وارد کنید",
+  "invalidEmail": "ایمیل وارد شده نامعتبر است",
+  "emptyPassword": "کلمه عبور خود را وارد کنید"
 }

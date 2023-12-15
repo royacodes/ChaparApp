@@ -3,5 +3,5 @@ class AppInsets {
   static const smallPadding = 8.0;
   static const mediumPadding = 16.0;
   static const largePadding = 24.0;
-  static const extraSize = 26.0;
+  static const extraPadding = 32.0;
 }

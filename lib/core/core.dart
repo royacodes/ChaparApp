@@ -1,3 +1,4 @@
+export 'constants/api_path.dart';
 export 'constants/app_insets.dart';
 export 'constants/assets_path.dart';
 export 'constants/consts.dart';
@@ -8,6 +9,7 @@ export 'exceptions/error_const.dart';
 export 'exceptions/exceptions.dart';
 export 'routes/routes.dart';
 export 'usecase/usecase.dart';
+export 'utils/email_validation.dart';
 export 'widgets/app_bar_back_button.dart';
 export 'widgets/app_main_button.dart';
 export 'widgets/button_progress.dart';

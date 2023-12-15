@@ -11,35 +11,38 @@ class LoginPageHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.3,
-          child: AspectRatio(
-            aspectRatio: 1 / 1,
-            child: SvgPicture.asset(AssetPath.appLogo),
+    return Container(
+      margin: const EdgeInsetsDirectional.only(top: 3 * AppInsets.extraPadding),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.3,
+            child: AspectRatio(
+              aspectRatio: 1 / 1,
+              child: SvgPicture.asset(AssetPath.appLogo),
+            ),
           ),
-        ),
-        Text(
-          S.of(context).loginTo,
-          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-              color: Theme.of(context).colorScheme.onSurface),
-        ),
-        const SizedBox(
-          height: AppInsets.smallPadding,
-        ),
-        Text(
-          S.of(context).appName,
-          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+          Text(
+            S.of(context).loginTo,
+            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                 fontWeight: FontWeight.bold,
-                fontSize: 22,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-        )
-      ],
+                fontSize: 20,
+                color: Theme.of(context).colorScheme.onSurface),
+          ),
+          const SizedBox(
+            height: AppInsets.smallPadding,
+          ),
+          Text(
+            S.of(context).appName,
+            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -11,19 +11,17 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Flexible(flex: 1, child: Container()),
-            const Flexible(flex: 2, child: LoginPageHeader()),
-            Flexible(
-              flex: 4,
-              child: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const LoginPageHeader(),
+              Container(
                   margin: const EdgeInsetsDirectional.symmetric(
                       horizontal: 16, vertical: 8),
                   child: const LoginPageForm()),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

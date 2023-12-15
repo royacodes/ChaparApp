@@ -99,6 +99,36 @@ class S {
       args: [],
     );
   }
+
+  /// `ایمیل خود را وارد کنید`
+  String get emptyEmail {
+    return Intl.message(
+      'ایمیل خود را وارد کنید',
+      name: 'emptyEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ایمیل وارد شده نامعتبر است`
+  String get invalidEmail {
+    return Intl.message(
+      'ایمیل وارد شده نامعتبر است',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `کلمه عبور خود را وارد کنید`
+  String get emptyPassword {
+    return Intl.message(
+      'کلمه عبور خود را وارد کنید',
+      name: 'emptyPassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

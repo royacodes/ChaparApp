@@ -24,6 +24,12 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appName": MessageLookupByLibrary.simpleMessage("چاپار"),
         "emailLabel": MessageLookupByLibrary.simpleMessage("ایمیل"),
+        "emptyEmail":
+            MessageLookupByLibrary.simpleMessage("ایمیل خود را وارد کنید"),
+        "emptyPassword":
+            MessageLookupByLibrary.simpleMessage("کلمه عبور خود را وارد کنید"),
+        "invalidEmail":
+            MessageLookupByLibrary.simpleMessage("ایمیل وارد شده نامعتبر است"),
         "loginButton": MessageLookupByLibrary.simpleMessage("ورود"),
         "loginTo": MessageLookupByLibrary.simpleMessage("ورود به "),
         "passwordLabel": MessageLookupByLibrary.simpleMessage("کلمه عبور")
