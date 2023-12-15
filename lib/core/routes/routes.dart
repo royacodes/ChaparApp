@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 
 import '../../features/auth/auth.dart';
+import '../../features/consignment/consignment.dart';
 
 part 'routes.gr.dart';
 
@@ -12,5 +13,8 @@ class AppRouter extends _$AppRouter {
             initial: true,
             page: LoginRoute.page,
             transitionsBuilder: TransitionsBuilders.slideBottom),
+        CustomRoute(
+            page: ConsignmentListRoute.page,
+            transitionsBuilder: TransitionsBuilders.fadeIn),
       ];
 }

@@ -20,7 +20,13 @@ abstract class _$AppRouter extends RootStackRouter {
         routeData: routeData,
         child: const LoginPage(),
       );
-    }
+    },
+    ConsignmentListRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ConsignmentListPage(),
+      );
+    },
   };
 }
 
@@ -34,6 +40,20 @@ class LoginRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'LoginRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ConsignmentListPage]
+class ConsignmentListRoute extends PageRouteInfo<void> {
+  const ConsignmentListRoute({List<PageRouteInfo>? children})
+      : super(
+          ConsignmentListRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ConsignmentListRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

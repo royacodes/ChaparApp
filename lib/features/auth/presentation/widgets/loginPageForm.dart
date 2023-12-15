@@ -112,12 +112,18 @@ class _LoginPageFormState extends State<LoginPageForm> {
               height: 16,
             ),
             BlocConsumer<LoginCubit, LoginState>(
-              listener: (context, state) async {
+              listener: (context, state) {
                 if (state is LoginLoaded) {
                   const storage = FlutterSecureStorage();
-                  await storage.write(
-                      key: AppConsts.accessTokenKey,
-                      value: state.loginResponse!.accessToken);
+                  storage
+                      .write(
+                          key: AppConsts.accessTokenKey,
+                          value: state.loginResponse!.accessToken)
+                      .then((value) {
+                    AutoRouter.of(context).pushAndPopUntil(
+                        const ConsignmentListRoute(),
+                        predicate: (route) => false);
+                  });
                 }
                 if (state is LoginFailure) {
                   if (mounted) {

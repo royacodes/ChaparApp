@@ -7,4 +7,6 @@
   "emptyEmail": "Enter your Email",
   "invalidEmail": "Your email is invalid",
   "emptyPassword": "Enter your password",
-  "invalidLoginRequestException": "Email or Password is wrong"}
+  "invalidLoginRequestException": "Email or Password is wrong",
+  "consignments": "محموله ها"
+}

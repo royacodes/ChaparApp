@@ -139,6 +139,16 @@ class S {
       args: [],
     );
   }
+
+  /// `محموله ها`
+  String get consignments {
+    return Intl.message(
+      'محموله ها',
+      name: 'consignments',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
