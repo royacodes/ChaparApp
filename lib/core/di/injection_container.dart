@@ -1,5 +1,6 @@
 import 'package:chaparapp/core/core.dart';
 import 'package:chaparapp/features/auth/auth.dart';
+import 'package:chaparapp/features/consignment/consignment.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
@@ -11,16 +12,25 @@ final sl = GetIt.instance;
 Future<void> init() async {
   ///UseCases
   sl.registerLazySingleton(() => Login(loginRepository: sl()));
+  sl.registerLazySingleton(
+      () => GetAllConsignment(consignmentRepository: sl()));
 
   ///Repositories
   sl.registerLazySingleton<LoginRepository>(() => LoginRepositoryImpl(
         loginRemoteDatasource: sl(),
       ));
+  sl.registerLazySingleton<ConsignmentRepository>(
+      () => ConsignmentRepositoryImpl(
+            consignmentRemoteDatasource: sl(),
+          ));
 
   ///Remote Data Sources
   sl.registerLazySingleton<LoginRemoteDatasource>(
       () => LoginRemoteDatasourceImpl(dio: sl()));
+  sl.registerLazySingleton<ConsignmentRemoteDatasource>(
+      () => ConsignmentRemoteDatasourceImpl(dio: sl()));
 
+  ///External
   sl.registerLazySingleton(() {
     final dio = Dio();
     dio.options.baseUrl = AppConfig.baseUrl;

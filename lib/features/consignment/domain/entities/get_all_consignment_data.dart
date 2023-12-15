@@ -23,7 +23,7 @@ class GetAllConsignmentData extends Equatable {
   @JsonKey(defaultValue: DefaultValues.objectDefaultValue)
   final GetAllConsignmentReceiver receiver;
   @JsonKey(
-      name: 'receiver_address', defaultValue: DefaultValues.stringDefaultValue)
+      name: 'receiver_address', defaultValue: DefaultValues.objectDefaultValue)
   final GetAllConsignmentReceiverAddress receiverAddress;
 
   @override
