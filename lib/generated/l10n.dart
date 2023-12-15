@@ -50,11 +50,51 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Chapar`
+  /// `چاپار`
   String get appName {
     return Intl.message(
-      'Chapar',
+      'چاپار',
       name: 'appName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ورود به `
+  String get loginTo {
+    return Intl.message(
+      'ورود به ',
+      name: 'loginTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ورود`
+  String get loginButton {
+    return Intl.message(
+      'ورود',
+      name: 'loginButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `کلمه عبور`
+  String get passwordLabel {
+    return Intl.message(
+      'کلمه عبور',
+      name: 'passwordLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ایمیل`
+  String get emailLabel {
+    return Intl.message(
+      'ایمیل',
+      name: 'emailLabel',
       desc: '',
       args: [],
     );

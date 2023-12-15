@@ -1,4 +1,7 @@
 {
-  "appName": "Chapar"
-
+  "appName": "Chapar",
+  "loginTo": "ورود به ",
+  "loginButton": "Log In",
+  "passwordLabel": "password",
+  "emailLabel": "email"
 }

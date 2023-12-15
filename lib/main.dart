@@ -7,6 +7,7 @@ import 'package:overlay_support/overlay_support.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'core/di/injection_container.dart' as di;
 import 'generated/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,6 +44,9 @@ class MyApp extends StatelessWidget {
         ),
         localizationsDelegates: const [
           S.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate
         ],
         supportedLocales: const [
           Locale('fa', ''),
